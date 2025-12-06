@@ -1,0 +1,82 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const {
+  title = "Liz's Cleaning Service - Cherokee County, GA",
+  description = 'Professional residential, commercial, and Airbnb cleaning services in Cherokee County, GA. Reliable, detailed, and flexible with same-day turnovers. Flat rates by size.'
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Dark mode script - runs before page renders to prevent flash -->
+    <script is:inline>
+      // Check for saved preference or use OS preference
+      if (
+        localStorage.theme === 'dark' ||
+        (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+      ) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    </script>
+
+    <!-- SEO Meta Tags -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta
+      name="keywords"
+      content="cleaning service, Cherokee County, residential cleaning, commercial cleaning, Airbnb cleaning, house cleaning, Georgia"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+
+    <!-- Structured Data for Local Business -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Liz's Cleaning Service",
+        "description": "Professional cleaning services for residential, commercial, and Airbnb properties",
+        "address": {
+          "@type": "PostalAddress",
+          "addressRegion": "GA",
+          "addressLocality": "Cherokee County"
+        },
+        "areaServed": {
+          "@type": "GeoCircle",
+          "geoMidpoint": {
+            "@type": "GeoCoordinates",
+            "addressLocality": "Cherokee County",
+            "addressRegion": "GA"
+          }
+        },
+        "priceRange": "$80-$140",
+        "openingHours": ["Mo 09:00-17:00", "Th 09:00-17:00", "Tu 09:00-12:00", "Fr 09:00-12:00"]
+      }
+    </script>
+  </head>
+  <body class="antialiased bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-200">
+    <slot />
+  </body>
+</html>

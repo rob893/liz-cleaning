@@ -1,43 +1,145 @@
-# Astro Starter Kit: Minimal
+# Liz's Cleaning Service Website
 
-```sh
-npm create astro@latest -- --template minimal
+A modern, fast, and SEO-optimized static website for Liz's Cleaning Service in Cherokee County, GA.
+
+## 🚀 Built With
+
+- **Astro** - Modern static site generator
+- **Tailwind CSS** - Utility-first CSS framework
+- **TypeScript** - Type-safe JavaScript
+
+## 🌟 Features
+
+- ✅ Fully responsive design (mobile & desktop)
+- ✅ SEO optimized with meta tags and structured data
+- ✅ Fast load times (static HTML generation)
+- ✅ Clean, modern design
+- ✅ Dark mode support
+- ✅ Service showcase
+- ✅ Transparent pricing
+- ✅ Photo gallery
+- ✅ Customer testimonials
+
+## 📋 Services Offered
+
+- **Residential Cleaning** - Deep cleaning for homes
+- **Commercial Cleaning** - Professional workspace cleaning
+- **Airbnb Turnover** - Fast, same-day turnover service
+
+## 💰 Pricing
+
+- 1 Bedroom: $80
+- 2 Bedrooms: $110
+- 3 Bedrooms: $140
+
+## 🛠️ Development
+
+### Prerequisites
+
+- Node.js (v18 or higher)
+- npm
+
+### Installation
+
+```bash
+npm install
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+### Development Server
 
-## 🚀 Project Structure
+```bash
+npm run dev
+```
 
-Inside of your Astro project, you'll see the following folders and files:
+Visit `http://localhost:4321` to view the site.
 
-```text
+### Build for Production
+
+```bash
+npm run build
+```
+
+### Preview Production Build
+
+```bash
+npm run preview
+```
+
+## 📁 Project Structure
+
+```
 /
-├── public/
+├── public/              # Static assets (images, favicon, etc.)
 ├── src/
-│   └── pages/
-│       └── index.astro
+│   ├── components/      # Reusable Astro components
+│   │   ├── Header.astro
+│   │   ├── Hero.astro
+│   │   ├── Services.astro
+│   │   ├── Pricing.astro
+│   │   ├── Gallery.astro
+│   │   ├── Testimonials.astro
+│   │   ├── Contact.astro
+│   │   └── Footer.astro
+│   ├── layouts/         # Page layouts
+│   │   └── Layout.astro
+│   ├── pages/           # Page routes
+│   │   └── index.astro
+│   └── styles/          # Global styles
+│       └── global.css
+├── astro.config.mjs     # Astro configuration
+├── tailwind.config.mjs  # Tailwind configuration
 └── package.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 🚀 Deployment
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+### GitHub Pages
 
-Any static assets, like images, can be placed in the `public/` directory.
+1. Build the site:
 
-## 🧞 Commands
+   ```bash
+   npm run build
+   ```
 
-All commands are run from the root of the project, from a terminal:
+2. Update `astro.config.mjs` to set your base path (if deploying to a subdirectory):
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+   ```js
+   export default defineConfig({
+     site: 'https://yourusername.github.io',
+     base: '/your-repo-name'
+   });
+   ```
 
-## 👀 Want to learn more?
+3. Deploy the `dist` folder to GitHub Pages using GitHub Actions or manually push to the `gh-pages` branch.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## 📝 Customization
+
+### Update Contact Information
+
+Edit `src/components/Footer.astro` and `src/components/Contact.astro` to update:
+
+- Phone number
+- Email address
+- Social media links
+
+### Update Business Hours
+
+Edit `src/components/Footer.astro` to modify business hours.
+
+### Add Real Photos
+
+Replace placeholder gallery items in `src/components/Gallery.astro` with actual cleaning photos. Store images in the `public/` directory.
+
+## 📊 SEO Features
+
+- ✅ Semantic HTML structure
+- ✅ Meta tags (title, description, keywords)
+- ✅ Open Graph tags for social sharing
+- ✅ Structured data (LocalBusiness schema)
+- ✅ Mobile-friendly design
+- ✅ Fast loading times
+- ✅ Clean URLs
+
+## 📄 License
+
+Copyright © 2025 Liz's Cleaning Service. All rights reserved.

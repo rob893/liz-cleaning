@@ -1,16 +1,27 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Services from '../components/Services.astro';
+import Pricing from '../components/Pricing.astro';
+import Gallery from '../components/Gallery.astro';
+import Testimonials from '../components/Testimonials.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout
+  title="Liz's Cleaning Service - Professional Cleaning in Cherokee County, GA"
+  description="Reliable, detailed cleaning services for residential, commercial, and Airbnb properties in Cherokee County. Same-day service available. Flat rates: 1BR $80, 2BR $110, 3BR $140."
+>
+  <Header />
+  <main>
+    <Hero />
+    <Services />
+    <Pricing />
+    <Gallery />
+    <Testimonials />
+    <Contact />
+  </main>
+  <Footer />
+</Layout>
