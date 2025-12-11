@@ -8,6 +8,6 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
   },
-  site: 'https://rob893.github.io',
-  base: import.meta.env.PROD ? '/liz-cleaning' : '/'
+  site: 'https://thetidygal.com',
+  base: '/'
 });
