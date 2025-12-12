@@ -1,6 +1,6 @@
 # Plan: Static Landing Page for Cleaning Business
 
-Create a modern, mobile-responsive static website to advertise a local cleaning service (named "Liz's Cleaning Service") in Cherokee County, GA. The site will emphasize fast load times, SEO optimization, and clear service offerings (residential, commercial, Airbnb turnovers) with transparent flat-rate pricing.
+Create a modern, mobile-responsive static website to advertise a local cleaning service (named "The Tidy Gal") in Cherokee County, GA. The site will emphasize fast load times, SEO optimization, and clear service offerings (residential, commercial, Airbnb turnovers) with transparent flat-rate pricing.
 
 ## Steps
 

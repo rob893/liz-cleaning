@@ -1,6 +1,6 @@
-# Liz's Cleaning Service Website
+# The Tidy Gal Website
 
-A modern, fast, and SEO-optimized static website for Liz's Cleaning Service in Cherokee County, GA.
+A modern, fast, and SEO-optimized static website for The Tidy Gal in Cherokee County, GA.
 
 ## 🚀 Built With
 
@@ -142,4 +142,4 @@ Replace placeholder gallery items in `src/components/Gallery.astro` with actual 
 
 ## 📄 License
 
-Copyright © 2025 Liz's Cleaning Service. All rights reserved.
+Copyright © 2025 The Tidy Gal. All rights reserved.

@@ -7,8 +7,8 @@ interface Props {
 }
 
 const {
-  title = "The Tidy Gal - Cherokee County, GA",
-  description = 'Professional residential, commercial, and Airbnb cleaning services in Cherokee County, GA. Reliable, detailed, and flexible with same-day turnovers. Flat rates by size.'
+  title = 'The Tidy Gal - Cherokee County, GA | Woodstock, Canton, Holly Springs',
+  description = 'Professional residential, commercial, and Airbnb cleaning services in Cherokee County, GA including Woodstock, Canton, and Holly Springs. Reliable, detailed, and flexible with same-day turnovers. Flat rates by size.'
 } = Astro.props;
 
 const faviconUrl = new URL('/favicon.svg', Astro.site || Astro.url.origin).pathname;
@@ -40,7 +40,7 @@ const faviconUrl = new URL('/favicon.svg', Astro.site || Astro.url.origin).pathn
     <meta name="description" content={description} />
     <meta
       name="keywords"
-      content="cleaning service, Cherokee County, residential cleaning, commercial cleaning, Airbnb cleaning, house cleaning, Georgia"
+      content="cleaning service, Cherokee County, Woodstock, Canton, Holly Springs, residential cleaning, commercial cleaning, Airbnb cleaning, house cleaning, Georgia"
     />
 
     <!-- Open Graph / Facebook -->
@@ -58,21 +58,35 @@ const faviconUrl = new URL('/favicon.svg', Astro.site || Astro.url.origin).pathn
       {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
-        "name": "Liz's Cleaning Service",
+        "name": "The Tidy Gal",
         "description": "Professional cleaning services for residential, commercial, and Airbnb properties",
         "address": {
           "@type": "PostalAddress",
           "addressRegion": "GA",
           "addressLocality": "Cherokee County"
         },
-        "areaServed": {
-          "@type": "GeoCircle",
-          "geoMidpoint": {
-            "@type": "GeoCoordinates",
-            "addressLocality": "Cherokee County",
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Woodstock",
+            "addressRegion": "GA"
+          },
+          {
+            "@type": "City",
+            "name": "Canton",
+            "addressRegion": "GA"
+          },
+          {
+            "@type": "City",
+            "name": "Holly Springs",
+            "addressRegion": "GA"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Cherokee County",
             "addressRegion": "GA"
           }
-        },
+        ],
         "priceRange": "$80-$140",
         "openingHours": ["Mo 09:00-17:00", "Th 09:00-17:00", "Tu 09:00-12:00", "Fr 09:00-12:00"]
       }

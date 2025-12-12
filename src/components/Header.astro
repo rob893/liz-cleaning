@@ -3,18 +3,54 @@
 ---
 
 <header class="fixed w-full bg-white dark:bg-gray-800 shadow-sm z-50 transition-colors duration-200">
-  <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-    <div class="flex items-center gap-2">
-      <svg class="w-8 h-8 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
-        ></path>
+  <nav class="container mx-auto px-4 py-1 flex justify-between items-center">
+    <a href="/" class="flex items-center">
+      <svg class="h-18 w-auto" viewBox="0 0 620 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Water droplet -->
+        <g transform="translate(0, 20)">
+          <!-- Droplet shape with gradient -->
+          <defs>
+            <linearGradient id="dropletGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" style="stop-color:#a8d5e2;stop-opacity:1"></stop>
+              <stop offset="100%" style="stop-color:#7cb8d1;stop-opacity:1"></stop>
+            </linearGradient>
+          </defs>
+          <path
+            d="M70 35 C70 35, 45 65, 45 90 C45 115, 55 130, 70 130 C85 130, 95 115, 95 90 C95 65, 70 35, 70 35 Z"
+            fill="url(#dropletGradient)"
+            stroke="none"></path>
+
+          <!-- Sparkles inside droplet -->
+          <g fill="white">
+            <!-- Large star -->
+            <path d="M62 70 L64 76 L70 78 L64 80 L62 86 L60 80 L54 78 L60 76 Z"></path>
+            <!-- Medium star -->
+            <path d="M75 85 L76 88 L79 89 L76 90 L75 93 L74 90 L71 89 L74 88 Z"></path>
+            <!-- Small star -->
+            <path d="M68 95 L68.5 96.5 L70 97 L68.5 97.5 L68 99 L67.5 97.5 L66 97 L67.5 96.5 Z"></path>
+          </g>
+        </g>
+
+        <!-- Text -->
+        <g fill="currentColor" class="text-gray-900 dark:text-white" transform="translate(0, 20)">
+          <!-- "The Tidy Gal" -->
+          <text x="130" y="80" font-family="serif" font-size="58" font-weight="400" letter-spacing="-1"
+            >The Tidy Gal</text
+          >
+
+          <!-- "Home Cleaning" in script style -->
+          <text
+            x="145"
+            y="130"
+            font-family="cursive"
+            font-size="38"
+            font-weight="300"
+            font-style="italic"
+            letter-spacing="1">Home Cleaning</text
+          >
+        </g>
       </svg>
-      <span class="text-xl font-bold text-gray-900 dark:text-white">Liz's Cleaning Service</span>
-    </div>
+    </a>
 
     <!-- Desktop Navigation -->
     <ul class="hidden md:flex gap-6 items-center">
@@ -30,7 +66,7 @@
           class="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition">Pricing</a
         >
       </li>
-      <li>
+      <!-- <li>
         <a
           href="#gallery"
           class="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition">Gallery</a
@@ -42,7 +78,7 @@
           class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition"
           >Testimonials</a
         >
-      </li>
+      </li> -->
       <li>
         <a
           href="#contact"

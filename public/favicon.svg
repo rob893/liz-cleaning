@@ -1,11 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 130" fill="none">
+    <!-- Droplet shape with gradient -->
+    <defs>
+        <linearGradient id="dropletGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#a8d5e2;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#7cb8d1;stop-opacity:1" />
+        </linearGradient>
+    </defs>
     <path
-        d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-    <style>
-        path { stroke: #2563eb; }
-        @media (prefers-color-scheme: dark) {
-        path { stroke: #60a5fa; }
-        }
-    </style>
+        d="M50 5 C50 5, 20 40, 20 70 C20 95, 32 115, 50 115 C68 115, 80 95, 80 70 C80 40, 50 5, 50 5 Z"
+        fill="url(#dropletGradient)" stroke="none" />
+
+    <!-- Sparkles inside droplet -->
+    <g fill="#1a1a1a">
+        <!-- Large star -->
+        <path d="M42 55 L45 65 L55 68 L45 71 L42 81 L39 71 L29 68 L39 65 Z" />
+        <!-- Medium star -->
+        <path d="M58 75 L60 81 L66 83 L60 85 L58 91 L56 85 L50 83 L56 81 Z" />
+        <!-- Small star -->
+        <path d="M47 92 L48 95 L51 96 L48 97 L47 100 L46 97 L43 96 L46 95 Z" />
+    </g>
 </svg>
