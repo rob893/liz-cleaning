@@ -8,7 +8,7 @@ interface Props {
 
 const {
   title = 'The Tidy Gal - Cherokee County, GA | Woodstock, Canton, Holly Springs',
-  description = 'Professional residential, commercial, and Airbnb cleaning services in Cherokee County, GA including Woodstock, Canton, and Holly Springs. Reliable, detailed, and flexible. Flat rates by size.'
+  description = 'Professional residential, commercial, and Airbnb cleaning services in Cherokee County, GA including Woodstock, Canton, and Holly Springs. Reliable, detailed, and flexible. Call or email for a free quote.'
 } = Astro.props;
 
 const faviconUrl = new URL('/favicon.svg', Astro.site || Astro.url.origin).pathname;
@@ -87,7 +87,6 @@ const faviconUrl = new URL('/favicon.svg', Astro.site || Astro.url.origin).pathn
             "addressRegion": "GA"
           }
         ],
-        "priceRange": "$80-$140",
         "openingHours": ["Mo 09:00-17:00", "Th 09:00-17:00", "Tu 09:00-12:00", "Fr 09:00-12:00"]
       }
     </script>
